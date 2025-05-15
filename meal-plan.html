@@ -25,13 +25,10 @@
   }
   .table-container {
     width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
     margin: 1rem 0;
   }
   table { 
     width: 100%;
-    min-width: 600px;
     border-collapse: collapse; 
     margin: 0;
     font-size: 0.9rem;
@@ -40,12 +37,9 @@
     border: 1px solid #ddd; 
     padding: 0.5rem;
     text-align: left;
-    white-space: nowrap;
   }
   th { 
     background-color: #f0f0f0;
-    position: sticky;
-    top: 0;
   }
   tr:nth-child(even) { background-color: #fafafa; }
   nav { 
@@ -64,6 +58,55 @@
     display: inline-block;
     padding: 0.25rem 0.5rem;
   }
+
+  /* Mobile stacked layout */
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+    
+    thead tr {
+      display: none;
+    }
+    
+    tr {
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: white;
+    }
+    
+    td {
+      display: flex;
+      padding: 0.75rem;
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+    }
+    
+    td:last-child {
+      border-bottom: none;
+    }
+    
+    td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0.5rem;
+      width: 45%;
+      font-weight: bold;
+      color: #666;
+    }
+    
+    tr:nth-child(even) {
+      background: #fafafa;
+    }
+    
+    .table-container {
+      padding: 0 0.5rem;
+    }
+  }
+
   @media (max-width: 480px) {
     body {
       padding: 0 0.5rem;
@@ -92,17 +135,99 @@
   <a href="breakfast.html">🍳 Breakfast</a> |
   <a href="lunch.html">🥗 Lunch</a> |
   <a href="dinner.html">🍛 Dinner</a> |
-  <a href="snacks.html">🍌 Snacks</a>
+  <a href="snacks.html">🍌 Snacks</a> |
+  <a href="meal-plan.html">🥗 Lunch</a>
+
 </nav>
 
   <h1>1758 kcal/day Heart-Healthy Meal Plans</h1>
   <h2>Day 1</h2>
   <div class="table-container">
-    <table><thead><tr><th>Meal</th><th>Food</th><th>Details</th></tr></thead><tbody><tr><td>Breakfast</td><td>Huel Protein Shake</td><td>105 kcal, 20g protein</td></tr><tr><td>Snack</td><td>Boiled Eggs</td><td>160 kcal, 13g protein</td></tr><tr><td>Lunch</td><td>Chickpea Salad</td><td>300 kcal, 12g protein</td></tr><tr><td>Snack</td><td>Greek Yoghurt with Walnuts</td><td>190 kcal, 10g protein</td></tr><tr><td>Dinner</td><td>Grilled Chicken & Broccoli</td><td>430 kcal, 35g protein</td></tr><tr><td>Evening</td><td>Huel Meal Replacement</td><td>400 kcal, 29g protein</td></tr></tbody></table>
+    <table>
+      <thead>
+        <tr>
+          <th>Meal</th>
+          <th>Food</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Meal">Breakfast</td>
+          <td data-label="Food">Huel Protein Shake</td>
+          <td data-label="Details">105 kcal, 20g protein</td>
+        </tr>
+        <tr>
+          <td data-label="Meal">Snack</td>
+          <td data-label="Food">Boiled Eggs</td>
+          <td data-label="Details">160 kcal, 13g protein</td>
+        </tr>
+        <tr>
+          <td data-label="Meal">Lunch</td>
+          <td data-label="Food">Chickpea Salad</td>
+          <td data-label="Details">300 kcal, 12g protein</td>
+        </tr>
+        <tr>
+          <td data-label="Meal">Snack</td>
+          <td data-label="Food">Greek Yoghurt with Walnuts</td>
+          <td data-label="Details">190 kcal, 10g protein</td>
+        </tr>
+        <tr>
+          <td data-label="Meal">Dinner</td>
+          <td data-label="Food">Grilled Chicken & Broccoli</td>
+          <td data-label="Details">430 kcal, 35g protein</td>
+        </tr>
+        <tr>
+          <td data-label="Meal">Evening</td>
+          <td data-label="Food">Huel Meal Replacement</td>
+          <td data-label="Details">400 kcal, 29g protein</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <h2>Day 2</h2>
   <div class="table-container">
-    <table><thead><tr><th>Meal</th><th>Food</th><th>Details</th></tr></thead><tbody><tr><td>Breakfast</td><td>Oats & Greek Yoghurt Bowl</td><td>320 kcal, 18g protein</td></tr><tr><td>Snack</td><td>Hummus & Carrot Sticks</td><td>180 kcal, 5g protein</td></tr><tr><td>Lunch</td><td>Mackerel Sandwich</td><td>370 kcal, 20g protein</td></tr><tr><td>Snack</td><td>Boiled Eggs</td><td>160 kcal, 13g protein</td></tr><tr><td>Dinner</td><td>Lentil & Veg Stew</td><td>400 kcal, 24g protein</td></tr><tr><td>Evening</td><td>Protein Shake</td><td>105 kcal, 20g protein</td></tr></tbody></table>
+    <table>
+      <thead>
+        <tr>
+          <th>Meal</th>
+          <th>Food</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Meal">Breakfast</td>
+          <td data-label="Food">Oats & Greek Yoghurt Bowl</td>
+          <td data-label="Details">320 kcal, 18g protein</td>
+        </tr>
+        <tr>
+          <td data-label="Meal">Snack</td>
+          <td data-label="Food">Hummus & Carrot Sticks</td>
+          <td data-label="Details">180 kcal, 5g protein</td>
+        </tr>
+        <tr>
+          <td data-label="Meal">Lunch</td>
+          <td data-label="Food">Mackerel Sandwich</td>
+          <td data-label="Details">370 kcal, 20g protein</td>
+        </tr>
+        <tr>
+          <td data-label="Meal">Snack</td>
+          <td data-label="Food">Boiled Eggs</td>
+          <td data-label="Details">160 kcal, 13g protein</td>
+        </tr>
+        <tr>
+          <td data-label="Meal">Dinner</td>
+          <td data-label="Food">Lentil & Veg Stew</td>
+          <td data-label="Details">400 kcal, 24g protein</td>
+        </tr>
+        <tr>
+          <td data-label="Meal">Evening</td>
+          <td data-label="Food">Protein Shake</td>
+          <td data-label="Details">105 kcal, 20g protein</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
 </html>
