@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { GlobalStyles } from './styles/GlobalStyles';
+import Navigation from './components/Navigation';
+import Home from './pages/Home';
+import Breakfast from './pages/Breakfast';
+import Lunch from './pages/Lunch';
+import Dinner from './pages/Dinner';
+import Snacks from './pages/Snacks';
+import MealPlan from './pages/MealPlan';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router basename={process.env.PUBLIC_URL}>
+      <GlobalStyles />
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/breakfast" element={<Breakfast />} />
+        <Route path="/lunch" element={<Lunch />} />
+        <Route path="/dinner" element={<Dinner />} />
+        <Route path="/snacks" element={<Snacks />} />
+        <Route path="/meal-plan" element={<MealPlan />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
