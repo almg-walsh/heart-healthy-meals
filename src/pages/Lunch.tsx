@@ -1,30 +1,69 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import MealTable from '../components/MealTable';
 
-const lunchMeals = [
+interface Meal {
+  name: string;
+  ingredients: string[];
+  calories: string;
+}
+
+const lunchMeals: Meal[] = [
   {
-    meal: 'Chickpea Salad',
-    ingredients: '100g chickpeas, 1/2 red onion, 1 tomato, lemon juice, 1 tsp olive oil',
-    calories: 'Approx 300 kcal, 12g protein'
+    name: "Mediterranean Quinoa Bowl",
+    ingredients: [
+      "100g chickpeas",
+      "1/2 red onion",
+      "1 tomato",
+      "lemon juice",
+      "1 tsp olive oil"
+    ],
+    calories: "300 kcal, 12g protein"
   },
   {
-    meal: 'Mackerel Sandwich',
-    ingredients: '1 tin mackerel (100g), 2 slices wholemeal bread, handful of rocket',
-    calories: 'Approx 370 kcal, 20g protein'
+    name: "Grilled Chicken Salad",
+    ingredients: [
+      "1 tin mackerel (100g)",
+      "2 slices wholemeal bread",
+      "handful of rocket"
+    ],
+    calories: "370 kcal, 20g protein"
   },
   {
-    meal: 'Huel Meal (Powder)',
-    ingredients: '2 scoops (90g) mixed with water',
-    calories: 'Approx 400 kcal, 29g protein'
+    name: "Tuna and White Bean Salad",
+    ingredients: [
+      "2 scoops (90g) mixed with water"
+    ],
+    calories: "400 kcal, 29g protein"
   }
 ];
 
 const Lunch: React.FC = () => {
+  const location = useLocation();
+  const [selectedMeal, setSelectedMeal] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Get the selected meal from navigation state
+    const state = location.state as { selectedMeal?: string } | null;
+    if (state?.selectedMeal) {
+      setSelectedMeal(state.selectedMeal);
+      // Scroll to the selected meal
+      const element = document.getElementById(state.selectedMeal);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
-    <>
+    <div>
       <h1>Lunch Ideas</h1>
-      <MealTable meals={lunchMeals} />
-    </>
+      <MealTable 
+        meals={lunchMeals} 
+        selectedMeal={selectedMeal}
+        onMealSelect={setSelectedMeal}
+      />
+    </div>
   );
 };
 
