@@ -10,7 +10,7 @@ interface Meal {
 
 const dinnerMeals: Meal[] = [
   {
-    name: "Baked Salmon with Vegetables",
+    name: "Lentil & Veg Stew",
     ingredients: [
       "100g lentils",
       "carrots",
@@ -21,7 +21,7 @@ const dinnerMeals: Meal[] = [
     calories: "400 kcal, 24g protein"
   },
   {
-    name: "Lentil and Vegetable Stew",
+    name: "Grilled Chicken & Broccoli",
     ingredients: [
       "120g chicken thigh",
       "1 cup steamed broccoli",
@@ -30,7 +30,7 @@ const dinnerMeals: Meal[] = [
     calories: "430 kcal, 35g protein"
   },
   {
-    name: "Turkey and Quinoa Stuffed Peppers",
+    name: "Sardine Pasta",
     ingredients: [
       "80g wholewheat pasta",
       "1 tin sardines",

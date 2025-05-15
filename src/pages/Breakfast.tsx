@@ -10,7 +10,7 @@ interface Meal {
 
 const breakfastMeals: Meal[] = [
   {
-    name: "Greek Yogurt Parfait",
+    name: "Oats & Greek Yoghurt Bowl",
     ingredients: [
       "40g oats",
       "100g Greek yoghurt",
@@ -20,7 +20,7 @@ const breakfastMeals: Meal[] = [
     calories: "320 kcal, 18g protein"
   },
   {
-    name: "Avocado Toast with Eggs",
+    name: "Scrambled Eggs on Toast",
     ingredients: [
       "2 eggs",
       "1 slice wholemeal toast",

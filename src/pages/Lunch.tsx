@@ -10,7 +10,7 @@ interface Meal {
 
 const lunchMeals: Meal[] = [
   {
-    name: "Mediterranean Quinoa Bowl",
+    name: "Chickpea Salad",
     ingredients: [
       "100g chickpeas",
       "1/2 red onion",
@@ -21,7 +21,7 @@ const lunchMeals: Meal[] = [
     calories: "300 kcal, 12g protein"
   },
   {
-    name: "Grilled Chicken Salad",
+    name: "Mackerel Sandwich",
     ingredients: [
       "1 tin mackerel (100g)",
       "2 slices wholemeal bread",
@@ -30,7 +30,7 @@ const lunchMeals: Meal[] = [
     calories: "370 kcal, 20g protein"
   },
   {
-    name: "Tuna and White Bean Salad",
+    name: "Huel Meal (Powder)",
     ingredients: [
       "2 scoops (90g) mixed with water"
     ],

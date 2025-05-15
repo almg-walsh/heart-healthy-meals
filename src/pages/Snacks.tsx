@@ -10,14 +10,14 @@ interface Meal {
 
 const snackMeals: Meal[] = [
   {
-    name: "Almond and Berry Mix",
+    name: "Boiled Eggs",
     ingredients: [
       "2 eggs"
     ],
     calories: "160 kcal, 13g protein"
   },
   {
-    name: "Greek Yogurt with Honey",
+    name: "Hummus & Carrot Sticks",
     ingredients: [
       "50g hummus",
       "100g carrots"
@@ -25,7 +25,7 @@ const snackMeals: Meal[] = [
     calories: "180 kcal, 5g protein"
   },
   {
-    name: "Hummus and Vegetable Sticks",
+    name: "Greek Yoghurt with Walnuts",
     ingredients: [
       "100g yoghurt",
       "10g walnuts"

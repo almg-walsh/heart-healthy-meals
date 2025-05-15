@@ -66,31 +66,31 @@ const mealPlans: DayPlan[] = [
     meals: [
       {
         mealType: "Breakfast",
-        foodItem: "Greek Yogurt Parfait",
-        protein: "20g",
-        calories: "350",
+        foodItem: "Oats & Greek Yoghurt Bowl",
+        protein: "18g",
+        calories: "320",
         healthBenefits: "High in protein, calcium, and probiotics"
       },
       {
         mealType: "Lunch",
-        foodItem: "Mediterranean Quinoa Bowl",
-        protein: "25g",
-        calories: "450",
-        healthBenefits: "Rich in fiber, protein, and healthy fats"
+        foodItem: "Chickpea Salad",
+        protein: "12g",
+        calories: "300",
+        healthBenefits: "Rich in fiber and protein"
       },
       {
         mealType: "Dinner",
-        foodItem: "Baked Salmon with Vegetables",
-        protein: "35g",
-        calories: "550",
-        healthBenefits: "High in omega-3s, protein, and antioxidants"
+        foodItem: "Lentil & Veg Stew",
+        protein: "24g",
+        calories: "400",
+        healthBenefits: "High in protein and fiber"
       },
       {
         mealType: "Snack",
-        foodItem: "Almond and Berry Mix",
-        protein: "8g",
-        calories: "200",
-        healthBenefits: "Good source of healthy fats and antioxidants"
+        foodItem: "Boiled Eggs",
+        protein: "13g",
+        calories: "160",
+        healthBenefits: "Good source of protein"
       }
     ]
   },
@@ -99,31 +99,31 @@ const mealPlans: DayPlan[] = [
     meals: [
       {
         mealType: "Breakfast",
-        foodItem: "Avocado Toast with Eggs",
-        protein: "18g",
-        calories: "400",
-        healthBenefits: "High in healthy fats and protein"
-      },
-      {
-        mealType: "Lunch",
-        foodItem: "Grilled Chicken Salad",
-        protein: "30g",
-        calories: "400",
+        foodItem: "Scrambled Eggs on Toast",
+        protein: "16g",
+        calories: "290",
         healthBenefits: "High in protein and fiber"
       },
       {
+        mealType: "Lunch",
+        foodItem: "Mackerel Sandwich",
+        protein: "20g",
+        calories: "370",
+        healthBenefits: "Rich in omega-3s and protein"
+      },
+      {
         mealType: "Dinner",
-        foodItem: "Lentil and Vegetable Stew",
-        protein: "22g",
-        calories: "450",
-        healthBenefits: "Rich in fiber, protein, and minerals"
+        foodItem: "Grilled Chicken & Broccoli",
+        protein: "35g",
+        calories: "430",
+        healthBenefits: "High in protein and vitamins"
       },
       {
         mealType: "Snack",
-        foodItem: "Greek Yogurt with Honey",
-        protein: "15g",
-        calories: "180",
-        healthBenefits: "High in protein and probiotics"
+        foodItem: "Greek Yoghurt with Walnuts",
+        protein: "10g",
+        calories: "190",
+        healthBenefits: "High in protein and healthy fats"
       }
     ]
   }
